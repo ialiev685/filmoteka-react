@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { fetchTrendingMovies } from "../../services/ApiMovies";
 import { ListMovies } from "../../components/ListMovies";
+import "./HomePage.scss";
 
 export const HomePage = () => {
   const [trendMovies, setTrendMovies] = useState([]);
@@ -14,7 +15,7 @@ export const HomePage = () => {
   }, []);
 
   return (
-    <div>
+    <div className="list-movies">
       <h1>Trending today</h1>
 
       {trendMovies && <ListMovies listMovies={trendMovies} />}
