@@ -1,0 +1,16 @@
+.navigation {
+  margin-bottom: 10px;
+  &__link {
+    text-decoration: none;
+    // font-size: 22px;
+    color: #747475;
+  }
+
+  &__link:not(:last-child) {
+    // margin-right: 10px;
+  }
+
+  &__active-link {
+    color: #f8ffdd;
+  }
+}
