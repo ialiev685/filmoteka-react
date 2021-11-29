@@ -1,1 +1,1 @@
-export { Reviews } from "./Reviews.jsx";
+export { Reviews } from "./Reviews.tsx";

@@ -1,7 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export const ItemCast = ({ character, name, profile }) => {
+interface IProps {
+  character: string;
+  name: string;
+  profile: string;
+}
+
+export const ItemCast = ({ character, name, profile }: IProps) => {
   return (
     <li>
       <img

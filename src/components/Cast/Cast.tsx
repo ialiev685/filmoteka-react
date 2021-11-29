@@ -3,10 +3,11 @@ import { useParams } from "react-router-dom";
 import { fetchCast } from "../../services";
 import { ItemCast } from "../ItemCast";
 import "./Cast.scss";
+import { IParams } from "../../types";
 
 export const Cast = () => {
-  const { movieId } = useParams();
-  const [cast, setCast] = useState(null);
+  const { movieId } = useParams<IParams>();
+  const [cast, setCast] = useState([]);
 
   useEffect(() => {
     fetchCast(movieId).then((response) => setCast(response.cast));

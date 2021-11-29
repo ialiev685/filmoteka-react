@@ -4,8 +4,14 @@ import { ListGroup } from "react-bootstrap";
 import PropTypes from "prop-types";
 import "./ItemMovie.scss";
 
-export const ItemMovie = ({ id, title }) => {
+interface IProps {
+  id: number;
+  title: string;
+}
+
+export const ItemMovie = ({ id, title }: IProps) => {
   const location = useLocation();
+
   return (
     <ListGroup.Item className="item-movie">
       <Link

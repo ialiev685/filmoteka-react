@@ -1,1 +1,1 @@
-export { ItemMovie } from "./ItemMovie";
+export { ItemMovie } from "./ItemMovie.tsx";

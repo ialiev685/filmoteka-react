@@ -4,7 +4,7 @@ import { fetchTrendingMovies } from "../../services/ApiMovies";
 import { ListMovies } from "../../components/ListMovies";
 
 export const HomePage = () => {
-  const [trendMovies, setTrendMovies] = useState(null);
+  const [trendMovies, setTrendMovies] = useState([]);
   const [error, setError] = useState("");
 
   useEffect(() => {

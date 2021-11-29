@@ -1,1 +1,1 @@
-export { ItemMovieDetalis } from "./ItemMovieDetalis.jsx";
+export { ItemMovieDetalis } from "./ItemMovieDetalis.tsx";

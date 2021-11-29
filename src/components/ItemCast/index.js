@@ -1,1 +1,1 @@
-export { ItemCast } from "./ItemCast.jsx";
+export { ItemCast } from "./ItemCast.tsx";

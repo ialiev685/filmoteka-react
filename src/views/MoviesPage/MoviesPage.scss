@@ -24,4 +24,9 @@
   @media screen and (min-width: 768px) {
     width: 768px;
   }
+
+  &__message {
+    margin-top: 10px;
+    text-align: center;
+  }
 }

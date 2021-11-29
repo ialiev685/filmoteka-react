@@ -8,7 +8,7 @@ import "./MoviesPage.scss";
 export const MoviesPage = () => {
   const [query, setQuery] = useState("");
   const [searchName, setSearchName] = useState("");
-  const [findMovies, setFindMovies] = useState(null);
+  const [findMovies, setFindMovies] = useState([]);
   const [error, setError] = useState("");
 
   const location = useLocation();
@@ -29,11 +29,11 @@ export const MoviesPage = () => {
     setQuery(queryFromUrl);
   }, [queryFromUrl]);
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchName(e.target.value.trim());
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setQuery(searchName);
 
@@ -67,8 +67,10 @@ export const MoviesPage = () => {
         </InputGroup>
       </form>
       {findMovies && <ListMovies listMovies={findMovies} />}
-      {findMovies?.length === 0 && <p>Not found</p>}
-      {error && <p>{error}</p>}
+      {findMovies?.length === 0 && (
+        <p className="serach-movies__message">Not found</p>
+      )}
+      {error && <p className="serach-movies__message">{error}</p>}
     </div>
   );
 };

@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import { fetchReviews } from "../../services";
 import { useParams } from "react-router-dom";
 import { ItemReview } from "../ItemReview";
+import { IParams } from "../../types";
 
 export const Reviews = () => {
-  const { movieId } = useParams();
-  const [content, setContent] = useState("");
+  const { movieId } = useParams<IParams>();
+  const [content, setContent] = useState([]);
 
   useEffect(() => {
     fetchReviews(movieId).then((response) => setContent(response.results));

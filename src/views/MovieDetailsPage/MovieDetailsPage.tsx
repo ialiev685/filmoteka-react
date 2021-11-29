@@ -3,18 +3,24 @@ import React, { useState, useEffect } from "react";
 import { fetchMovieId } from "../../services";
 import { ItemMovieDetalis } from "../../components/ItemMovieDetalis";
 import { Button } from "react-bootstrap";
+import { Tfrom } from "../../types";
+import { IParams } from "../../types";
 
 import "./MovieDetailsPage.scss";
+
+interface ILocation {
+  from: Tfrom;
+}
 
 export const MovieDetailsPage = () => {
   const [movieDetalis, setMovieDetalis] = useState(null);
 
   const history = useHistory();
-  const location = useLocation();
+  const location = useLocation<ILocation>();
 
   const toReturn = location.state?.from || { pathname: "/" };
 
-  const { movieId } = useParams();
+  const { movieId } = useParams<IParams>();
 
   useEffect(() => {
     fetchMovieId(movieId).then((response) => setMovieDetalis(response));

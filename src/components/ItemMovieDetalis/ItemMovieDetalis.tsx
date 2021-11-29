@@ -3,12 +3,29 @@ import React from "react";
 import { Cast } from "../Cast";
 import { Reviews } from "../Reviews";
 import { Link, Route, useRouteMatch } from "react-router-dom";
-
+import { Tfrom } from "../../types";
 import "./ItemMovieDetalis.scss";
 
 import PropTypes from "prop-types";
 
-export const ItemMovieDetalis = ({ movieDetalis, toReturn }) => {
+interface IGenres {
+  name: string;
+}
+
+interface IMovieDetalis {
+  title: string;
+  overview: string;
+  popularity: number;
+  genres: IGenres[];
+  poster_path: string;
+}
+
+interface IProps {
+  movieDetalis: IMovieDetalis;
+  toReturn: Tfrom;
+}
+
+export const ItemMovieDetalis = ({ movieDetalis, toReturn }: IProps) => {
   const { title, overview, popularity, genres, poster_path } = movieDetalis;
 
   const { url, path } = useRouteMatch();

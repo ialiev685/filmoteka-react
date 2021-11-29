@@ -1,1 +1,1 @@
-export { ListMovies } from "./ListMovies.jsx";
+export { ListMovies } from "./ListMovies.tsx";

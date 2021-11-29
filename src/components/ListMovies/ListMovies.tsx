@@ -3,7 +3,16 @@ import PropTypes from "prop-types";
 import { ListGroup } from "react-bootstrap";
 import { ItemMovie } from "../ItemMovie";
 
-export const ListMovies = ({ listMovies }) => {
+interface IlistMovies {
+  id: number;
+  title: string;
+}
+
+interface IProps {
+  listMovies: IlistMovies[];
+}
+
+export const ListMovies = ({ listMovies }: IProps) => {
   return (
     <ListGroup className="list-movies">
       {listMovies.map((el) => (

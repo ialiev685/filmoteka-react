@@ -1,1 +1,1 @@
-export { ItemReview } from "./ItemReview.jsx";
+export { ItemReview } from "./ItemReview.tsx";
