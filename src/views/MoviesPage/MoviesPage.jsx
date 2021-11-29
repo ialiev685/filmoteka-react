@@ -42,7 +42,7 @@ export const MoviesPage = () => {
   };
 
   return (
-    <>
+    <div className="serach-movies">
       <form className="form-control" onSubmit={handleSubmit}>
         <InputGroup>
           <FormControl
@@ -69,6 +69,6 @@ export const MoviesPage = () => {
       {findMovies && <ListMovies listMovies={findMovies} />}
       {findMovies?.length === 0 && <p>Not found</p>}
       {error && <p>{error}</p>}
-    </>
+    </div>
   );
 };

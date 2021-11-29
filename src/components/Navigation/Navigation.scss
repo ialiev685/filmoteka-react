@@ -1,16 +1,24 @@
 .navigation {
   margin-bottom: 10px;
+
+  &__logo {
+    margin-right: 20px;
+  }
   &__link {
     text-decoration: none;
-    // font-size: 22px;
+    font-size: 18px;
     color: #747475;
   }
 
   &__link:not(:last-child) {
-    // margin-right: 10px;
+    margin-right: 10px;
   }
 
   &__active-link {
     color: #f8ffdd;
   }
+}
+
+.navigation a:hover {
+  color: #f8ffdd;
 }

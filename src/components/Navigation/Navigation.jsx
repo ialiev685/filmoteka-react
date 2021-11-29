@@ -6,36 +6,29 @@ import "./Navigation.scss";
 
 export const Navigation = () => {
   return (
-    // <nav className="navigation">
     <Navbar bg="dark" variant="dark" className="navigation">
       <Container>
-        <NavLink to="/" className="navigation__link">
-          <Navbar.Brand>Filmoteka</Navbar.Brand>
-        </NavLink>
+        Filmoteka
+        <Navbar.Brand className="navigation__logo">Filmoteka</Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link>
-            <NavLink
-              exact
-              to="/"
-              className="navigation__link"
-              activeClassName="navigation__active-link"
-            >
-              Home
-            </NavLink>
-          </Nav.Link>
+          <NavLink
+            exact
+            to="/"
+            className="navigation__link"
+            activeClassName="navigation__active-link"
+          >
+            Home
+          </NavLink>
 
-          <Nav.Link>
-            <NavLink
-              to="/movies"
-              className="navigation__link"
-              activeClassName="navigation__active-link"
-            >
-              Movies
-            </NavLink>
-          </Nav.Link>
+          <NavLink
+            to="/movies"
+            className="navigation__link"
+            activeClassName="navigation__active-link"
+          >
+            Movies
+          </NavLink>
         </Nav>
       </Container>
     </Navbar>
-    // </nav>
   );
 };

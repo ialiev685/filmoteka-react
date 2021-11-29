@@ -2,6 +2,11 @@
   &__wrapper {
     display: flex;
     margin-bottom: 15px;
+    min-width: 320px;
+    flex-direction: column;
+    @media screen and(min-width: 768px) {
+      flex-direction: row;
+    }
   }
 
   &__discription {
@@ -11,6 +16,10 @@
 
   &__poster {
     margin-right: 20px;
+
+    @media screen and(max-width: 768px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__genres {
